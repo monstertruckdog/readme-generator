@@ -6,9 +6,50 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     {
-        type: 'list',
-        name: 'test_x',
-        choices: ['Cubs', 'Astros', 'Brewers', 'Cardinals']
+      type: 'input',
+      name: 'username',
+      message: 'Enter your github username'
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter your email address'
+    },
+    {
+      type: 'input',
+      name: 'projectname',
+      message: 'Enter the name of your project'
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Enter a description of your project'
+    },
+    {
+      type: 'input',
+      name: 'installation',
+      message: 'Enter instructions on how to install your project'
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Enter instructions or exmaples on how the project can be used'
+    },
+    {
+      type: 'input',
+      name: 'contribute',
+      message: 'Enter information on how people can contribute to the project'
+    },
+    {
+      type: 'input',
+      name: 'test',
+      message: 'Enter instructions and guidelines for testing project elements'
+    },
+    {
+      type: 'checkbox',
+      name: 'badge',
+      message: 'Select all applicable licesnses for your project',
+      choices: ['CC-BY-SA-4.0', 'Apache Licesnse 2.0', 'GNU GPLv3', 'ISC', 'MIT License', 'None / Not Applicable']
     }
 ];
 
@@ -20,26 +61,17 @@ function init() {
     inquirer
       .prompt(questions)
       .then((data) => {
-          console.log(`----ANALYSIS---------------------------------------`)
-          console.log(`DATA TYPE OF FROM OBJECT:                                ${typeof data.test_x}\nDATA TYPE OF FROM RAW VALUE:                             ${typeof 'Astros'}`);
-          console.log(`FROM OBJECT VALUE:                                       ${data.test_x}\nRAW VALUE:                                               ${'Astros'}`);
-          console.log(`Object.is EVAL RESULT:                                   ${Object.is(data.text_x, 'Astros')}`);
-          console.log(`PRIMITIVE COMPARISON EVAL RESULT (SUPER STRICT:  === ):  ${data.test_x === 'Astros'}`);
-          console.log(`PRIMITIVE COMPARISON EVAL RESULT (MEDIUM STRICT:  == ):  ${data.test_x === 'Astros'}`);
-          console.log(`PRIMITIVE COMPARISON EVAL RESULT (LEAST STRICT: = ):     ${data.test_x === 'Astros'}`);
-          console.log(`----END ANALYSIS----------------------------------\n`)
+        const filename = 'README.md';
 
-          const filename = 'README.md';
-
-          if (data.test_x === 'Astros') {
-            console.log(`----IF...THEN SECTION----------------------------`);
-            console.log(`FROM OBJECT VALUE (inside if...then):  ${data.test_x}`);
-            console.log(`${data.text_x} WAS YOUR CHOICE`);
-            fs.appendFile(filename, `perhaps this worked`,
-            (err) =>
-              err ? console.log(err) : console.log(`Your README file has now been successfully generated!`)
-            );
-            console.log(`----END IF...THEN SECTION-----------------------\n`);
+        if (data.test_x === 'Astros') {
+          console.log(`----IF...THEN SECTION----------------------------`);
+          console.log(`FROM OBJECT VALUE (inside if...then):  ${data.test_x}`);
+          console.log(`${data.text_x} WAS YOUR CHOICE`);
+          fs.appendFile(filename, `perhaps this worked`,
+          (err) =>
+            err ? console.log(err) : console.log(`Your README file has now been successfully generated!`)
+          );
+          console.log(`----END IF...THEN SECTION-----------------------\n`);
           } else {
             console.log(`----ELSE SECTION----------------------------`);
             console.log(`FROM OBJECT VALUE (inside else):  ${data.test_x}`);
@@ -83,9 +115,3 @@ inquirer
   });
   */
 
-  // project title
-  // description
-  // installation instructions
-  // usage information
-  // contribution guidelines
-  // test instructions
