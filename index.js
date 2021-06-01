@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -54,64 +55,24 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(readMeContent) {
+  fs.writeFile('./output/README.md', readMeContent, (err) =>
+    err ? console.error(err) : console.log('Congratulations!\nYour README file has been generated successfully!'));
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
       .prompt(questions)
       .then((data) => {
-        const filename = 'README.md';
-
-        if (data.test_x === 'Astros') {
-          console.log(`----IF...THEN SECTION----------------------------`);
-          console.log(`FROM OBJECT VALUE (inside if...then):  ${data.test_x}`);
-          console.log(`${data.text_x} WAS YOUR CHOICE`);
-          fs.appendFile(filename, `perhaps this worked`,
-          (err) =>
-            err ? console.log(err) : console.log(`Your README file has now been successfully generated!`)
-          );
-          console.log(`----END IF...THEN SECTION-----------------------\n`);
-          } else {
-            console.log(`----ELSE SECTION----------------------------`);
-            console.log(`FROM OBJECT VALUE (inside else):  ${data.test_x}`);
-            console.log(`THIS DID NOT WORK`);
-            console.log(`----END ELSE SECTION----------------------------\n`);
-          }
-      })
+        //const filename = 'README.md';
+        const readMeContent = generateMarkdown(data).trim();
+        //console.log(`OUTPUT:  ${readMeContent}`);
+        //console.log(`OUTPUT:  ${generateMarkdown(data)}`);
+        //console.log(`OUTPUT:  ${generateMarkdown()}`)
+        writeToFile(readMeContent)
+      });
 }
 
 // Function call to initialize app
 init();
-
-
-/*
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-    {
-      type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-    },
-    {
-      type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
-    },
-  ])
-  .then((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
-  });
-  */
-
