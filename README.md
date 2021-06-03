@@ -22,3 +22,20 @@ Installation consists of simply having a couple of Javascript files, downloading
  ```
   node index.js
 ```
+
+### Usage
+
+*screenshots here*
+
+### Contribute
+
+If you'd like to contribute to this project please feel free to reach out to me before submitting pull requests for review.
+
+### Testing
+
+Unit tests are coming soon!
+
+### Questions
+
+* GitHub:  [link](https://github.com/monstertruckdog/readme-generator)
+* Email:  *see GitHub page*
