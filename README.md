@@ -1,18 +1,23 @@
 # Professional README Generator
 
-### Description
+## Table Of Contents (TEST)
+
+* [Description](readme-generator#Description)
+* [Installation](readme-generator#Installation)
+* ...
+* [Testing](readme-generator#Testing)
+
+## Description
 
 To help reduce the time and effort it takes for a develper to organize and properly format information about their application's README file, we have created a README generator.  This application, written in node.js, will prompt the developer to enter the necessary information about their application or project and create a professional README document for them.  
 
-### Installation
+## Installation
 
-Installation consists of simply having a couple of Javascript files, downloading a package from [npm](https://www.npmjs.com/) and running the `node` command on  one of those JS files:
-
-1. [Clone or fork the repository](https://github.com/monstertruckdog/readme-generator) to a local directory
-2. In your terminal, navigate to the directory and execute the following command:
+1. [Fork the repository](https://github.com/monstertruckdog/readme-generator) to a local directory
+2. In your terminal, navigate to the repository directory and execute the following command:
 
  ```
- npm i inquirer
+ npm i
  ```
 3. Once installation is completed, execute another command in the terminal:
 
@@ -20,7 +25,12 @@ Installation consists of simply having a couple of Javascript files, downloading
   node index.js
 ```
 
-### Usage
+4. Follow the prompts in the application
+5. Once the application has generated the file navigate to the `/output` folder in the directory
+6. Open the `README.md` file and make any edits needed
+7. When ready, add the `README.md` file to the repo directory so that it's ready for the next `git add`
+
+## Usage
 
 ##### Entering README text
 

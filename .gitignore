@@ -1,0 +1,5 @@
+/node_modules
+/utils/*
+.DS_store
+package-lock.json
+TEMP

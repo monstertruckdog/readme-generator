@@ -11,7 +11,17 @@ const questions = [
     {
       type: 'input',
       name: 'email',
-      message: 'Enter your email address'
+      message: 'Enter your email address',
+      validate(address) {
+        const pass = address.match(
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g
+        );
+        if (pass) {
+          return true;
+        } else {
+          console.log('    <-- INVALID EMAIL ADDRESS. Try entering the email again')
+        }
+      }
     },
     {
       type: 'input',
