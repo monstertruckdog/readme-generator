@@ -25,11 +25,11 @@ ${data.description}\n\n
 ### License
 ${badgeConstruct}\n\n
 ### Index\n
-- [Installation](readme-generator#installation)
-- [Usage Information](readme-generator#usage)
-- [Contribute](readme-generator#contribute)
-- [Testing](readme-generator#testing)
-- [Questions](readme-generator#questions)\n
+- [Installation](#installation)
+- [Usage Information](#usage)
+- [Contribute](#contribute)
+- [Testing](#testing)
+- [Questions](#questions)\n
 ### Installation\n
 ${data.installation}\n\n
 ### Usage\n

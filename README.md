@@ -1,12 +1,5 @@
 # Professional README Generator
 
-## Table Of Contents (TEST)
-
-* [Description](#description)
-* [Installation](#installation)
-* ...
-* [Testing](#testing)
-
 ## Description
 
 To help reduce the time and effort it takes for a develper to organize and properly format information about their application's README file, we have created a README generator.  This application, written in node.js, will prompt the developer to enter the necessary information about their application or project and create a professional README document for them.  
@@ -34,7 +27,7 @@ To help reduce the time and effort it takes for a develper to organize and prope
 
 ##### Entering README text
 
-![entering-readme-text](./utils/readme_content/enteringreadmetext.mov)
+![entering-readme-text](./utils/readme_content/readme-generator_inquirer.gif)
 
 ##### Finished Product
 
