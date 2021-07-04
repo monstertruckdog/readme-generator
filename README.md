@@ -2,10 +2,10 @@
 
 ## Table Of Contents (TEST)
 
-* [Description](readme-generator#Description)
-* [Installation](readme-generator#Installation)
+* [Description](#description)
+* [Installation](#installation)
 * ...
-* [Testing](readme-generator#Testing)
+* [Testing](#testing)
 
 ## Description
 
