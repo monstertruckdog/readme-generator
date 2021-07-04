@@ -6,7 +6,7 @@ Description text will be entered here at a later date
 
 
 ### License
-![license](https://img.shields.io/badge/license-Apache License 2.0-informational)
+![](https://img.shields.io/badge/license-Apache License 2.0-informational)
 
 
 ### Index
