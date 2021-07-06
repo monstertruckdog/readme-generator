@@ -27,11 +27,15 @@ To help reduce the time and effort it takes for a develper to organize and prope
 
 ##### Entering README text
 
-![entering-readme-text](./utils/readme_content/readme-generator_inquirer.gif)
+![01_readme-generator_prompts](./utils/readme_content/01_readme-generator_prompts.gif)
 
-##### Finished Product
+##### README Generated Output
 
-![finshed-readme-product](./utils/readme_content/finalreadme.mov)
+![02_readme-generator_markdown_in_mdeditor](./utils/readme_content/02_readme-generator_markdown_in_mdeditor.gif)
+
+##### README Display in GitHub
+
+![03_readme-generator_markdown_in_github](./utils/readme_content/03_readme-generator_markdown_in_github.gif)
 
 ### Contribute
 
