@@ -1,6 +1,10 @@
 function renderLicenseBadge(data) {
   const getBadgeLink = renderLicenseLink(data);
-  return `![license](${getBadgeLink})`
+  if (getBadgeLink === 'NA') {
+    return 'NA'
+  } else {
+    return `![license](${getBadgeLink})`
+  }
 }
 
 function renderLicenseLink(data) {
@@ -12,7 +16,10 @@ function renderLicenseLink(data) {
       spaceCount++;
     }
   }
-  if (spaceCount > 0) {
+  if (data.badge === 'None / Not Applicable') {
+    badgeUrl = 'NA'
+    return badgeUrl
+  } else if (spaceCount > 0 && data.badge != 'None / Not Applicable') {
     const badgeUrlEncoding = data.badge.replace(/\s/g, '%20')
     badgeUrl = `https://img.shields.io/badge/license-${badgeUrlEncoding}-informational`
     return badgeUrl
