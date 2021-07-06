@@ -1,12 +1,12 @@
-# Professional README Generator
+# Monster Doug's Cool Project
 
 ### Description
 
-Description text will be entered here at a later date
+description text to come later
 
 
 ### License
-![](https://img.shields.io/badge/license-Apache License 2.0-informational)
+![license](https://img.shields.io/badge/license-Apache%20License%202.0-informational)
 
 
 ### Index
@@ -19,27 +19,27 @@ Description text will be entered here at a later date
 
 ### Installation
 
-To be determined.  Still figuring that out!
+people are watching me type so I'll keep this brief
 
 
 ### Usage
 
-Also to be determined.  Hope that's not an issue.
+utilization text to go here later
 
 
 ### Contribute
 
-Anyway they can, through GitHub
+This is not final, just a placeholder
 
 
 ### Testing
-Testing information would be entered here if I had it developed for this project
+How to test?  Testing will be determined later.
 
 
 ### Questions?
 For questions or comments feel free to reach out:
 
-* **Email**:  [dougmonster@yahoo.com](mailto:dougmonster@yahoo.com)
+* **Email**:  [monsterdoug@gmail.com](mailto:monsterdoug@gmail.com)
 * **GitHub Profile**:  [monsterdoug](https://github.com/monsterdoug)
 
 

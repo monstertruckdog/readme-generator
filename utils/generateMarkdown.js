@@ -4,20 +4,23 @@ function renderLicenseBadge(data) {
 }
 
 function renderLicenseLink(data) {
-  //const splitResponse = data.badge.split('');
+  let badgeUrl = '';
   const badgeNameSpaceCount = data.badge.split('');
-  const spaceCount = 0;
+  let spaceCount = 0;
   for (let i = 0; i < badgeNameSpaceCount.length; i++) {
     if (badgeNameSpaceCount[i] === ' ') {
       spaceCount++;
     }
   }
   if (spaceCount > 0) {
-    data.badge.replace(/\s/g, '%20')
+    const badgeUrlEncoding = data.badge.replace(/\s/g, '%20')
+    badgeUrl = `https://img.shields.io/badge/license-${badgeUrlEncoding}-informational`
+    return badgeUrl
   } else {
-    const badgeUrl = `https://img.shields.io/badge/license-${data.badge}-informational`
-    return badgeUrl;
+    badgeUrl = `https://img.shields.io/badge/license-${data.badge}-informational`
+    return badgeUrl
   }
+
 }
 
 function renderLicenseSection(data) {
